@@ -1,6 +1,8 @@
 import React from 'react';
+import App from './components/Example';
 import ReactDOM from 'react-dom/client'; // React 18 uses this
-import Example from './components/Example';
+require('./bootstrap');
+require('./components/Example');
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
@@ -22,9 +24,11 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
+
 // Ensure that the element exists before trying to render into it
 const rootElement = document.getElementById('example');
 if (rootElement) {
     const root = ReactDOM.createRoot(rootElement); // Create root for React 18
     root.render(<Example />);
 }
+ReactDOM.render(<App />, document.getElementById('example'));

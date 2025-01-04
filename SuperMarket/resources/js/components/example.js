@@ -1,12 +1,13 @@
+// resources/js/components/Example.js
+
 import React from 'react';
 
-// Capitalize the component name (PascalCase)
-const Example = () => {
-    return (
-        <div>
-            <h1>Hello, React!</h1>
-        </div>
-    );
-};
+function App() {
+  return (
+    <div>
+      <h1>Hello from React!</h1>
+    </div>
+  );
+}
 
-export default Example;
+export default App; // Exporting the component so it can be imported in app.js

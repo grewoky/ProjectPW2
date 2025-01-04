@@ -8,7 +8,7 @@
 </head>
 <body>
     <div id="example"></div>
-
+    <h5>WEB BABI</h5>
     <script src="{{ mix('js/app.js') }}"></script>
 </body>
 </html>
