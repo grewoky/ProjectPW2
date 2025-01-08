@@ -23,8 +23,6 @@ const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 
 // Ensure that the element exists before trying to render into it
-const rootElement = document.getElementById('example');
-if (rootElement) {
-    const root = ReactDOM.createRoot(rootElement); // Create root for React 18
-    root.render(<App />); // Render the App component
+if (document.getElementById('example')) {
+    ReactDOM.render(<Example />, document.getElementById('example'));
 }
